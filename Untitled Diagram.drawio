@@ -1,0 +1,199 @@
+<mxfile host="app.diagrams.net" modified="2021-01-22T01:35:44.950Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="y_ykyp4hnw5DRpkzmbKS" version="14.2.6" type="github">
+  <diagram id="9wYUw6wdjyKfq6m8-zAz" name="Page-1">
+    <mxGraphModel dx="906" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="730" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-5" value="Tool Bar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="730" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-6" value="Welcome to this organizer!&lt;br&gt;&lt;br&gt;&lt;br&gt;Sign up&lt;br&gt;Login&amp;nbsp;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="270" y="320" width="310" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1070" width="730" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-8" value="Journal.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Goals.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; To do list.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Calendar/Appts.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Inspo Board&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Recipes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1070" width="730" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-9" value="Type something here... hows your day going?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1240" width="420" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-10" value="Journal Route" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="960" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1860" width="730" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-14" value="Journal.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Goals.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; To do list.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Calendar/Appts.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Inspo Board&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Recipes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1860" width="730" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-15" value="Goals Route" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-16" value="What are your goals?&amp;nbsp;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="235" y="2040" width="370" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-17" value="Daily Mantra&lt;br&gt;&lt;i&gt;&quot;aspire to inspirre&quot;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1940" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-18" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="2720" width="730" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-20" value="Journal.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Goals.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; To do list.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Calendar/Appts.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Inspo Board&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Recipes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="2670" width="730" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-21" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="2810" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="2830" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="2850" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-24" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="2870" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-25" value="Submit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="2900" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-26" value="Form" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="660" y="2770" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-29" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="2870" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-30" value="To do list" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="2870" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-31" value="book travel" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="400" y="3070" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-32" value="grocery shopping list:&lt;br&gt;fruit&lt;br&gt;veggies&lt;br&gt;candy&lt;br&gt;chocolate" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="120" y="3070" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-33" value="take dog to groomer" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="400" y="2880" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-34" value="To do list Route" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="2570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-35" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250); display: inline; float: none;&quot;&gt;Home Page/Login&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="385" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-36" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="3500" width="730" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-37" value="Journal.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Goals.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; To do list.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Calendar/Appts.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Inspo Board&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Recipes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="3500" width="730" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-38" value="calendar Route" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="3420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-39" value="calendar" style="shape=table;html=1;whiteSpace=wrap;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="130" y="3660" width="510" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-40" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-39">
+          <mxGeometry y="30" width="510" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-41" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-40">
+          <mxGeometry width="170" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-42" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-40">
+          <mxGeometry x="170" width="170" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-43" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-40">
+          <mxGeometry x="340" width="170" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-44" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-39">
+          <mxGeometry y="137" width="510" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-45" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-44">
+          <mxGeometry width="170" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-46" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-44">
+          <mxGeometry x="170" width="170" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-47" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-44">
+          <mxGeometry x="340" width="170" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-48" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-39">
+          <mxGeometry y="243" width="510" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-49" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-48">
+          <mxGeometry width="170" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-50" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-48">
+          <mxGeometry x="170" width="170" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-51" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="l7GfbTm6gPjSTvWGOvBp-48">
+          <mxGeometry x="340" width="170" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-52" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="4290" width="730" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-53" value="inspo Route" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="4210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-54" value="Journal.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Goals.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; To do list.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Calendar/Appts.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Inspo Board&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Recipes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="4290" width="730" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-55" value="add pics here&amp;nbsp;" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="4490" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-56" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#1ba1e2;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="4720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-57" value="" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=2;hachureGap=8;fillColor=#990000;fillStyle=dots;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="4580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-58" value="" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=-1;hachureGap=8;fillStyle=cross-hatch;fillColor=#006600;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="4690" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-59" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#1ba1e2;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="4820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-60" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#1ba1e2;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="4510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-61" value="" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=2;hachureGap=8;fillColor=#990000;fillStyle=dots;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="4640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-62" value="" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=-1;hachureGap=8;fillStyle=cross-hatch;fillColor=#006600;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="4380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-63" value="" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=-1;hachureGap=8;fillStyle=cross-hatch;fillColor=#006600;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="4390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-64" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="5070" width="730" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-65" value="recipes Route" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="4990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-66" value="Journal.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Goals.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; To do list.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Calendar/Appts.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Inspo Board&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Recipes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="5070" width="730" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-67" value="recipe" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="5200" width="165" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-69" value="sub&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22form%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22530%22%20y%3D%225200%22%20width%3D%22195%22%20height%3D%2280%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3&lt;/span&gt;mit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="5240" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-70" value="title" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="5170" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-73" value="cake" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="5220" width="160" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="l7GfbTm6gPjSTvWGOvBp-74" value="cookies" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="5220" width="170" height="340" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
