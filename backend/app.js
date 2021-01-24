@@ -2,9 +2,13 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
-const homeController = require("./controllers/home.js");
 const mongoose = require("mongoose");
 const MONGOURI = process.env.MONGODB_URI;
+const homeController = require("./controllers/home.js");
+const goalController = require("./controllers/goals.js");
+const listController = require("./controllers/toDoList.js");
+const recipeController = require("./controllers/recipes.js");
+const inspoController = require("./controllers/inspoBoard.js");
 
 //============
 //Middleware
@@ -31,6 +35,10 @@ mongoose.connection.once("open", () => {
 //Controllers
 //============
 app.use("/home", homeController);
+app.use("/goals", goalController);
+app.use("/todolist", listController);
+app.use("/recipes", recipeController);
+app.use("/inspo", inspoController);
 
 //============
 //Listen Port
