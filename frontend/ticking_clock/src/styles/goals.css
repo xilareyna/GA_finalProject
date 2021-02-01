@@ -1,0 +1,56 @@
+.goalsForm {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.goal {
+  text-align: center;
+  list-style: none;
+  background-color: white;
+  color: #4c6568;
+  width: 20%;
+  height: 20%;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1%;
+  margin: 1%;
+}
+h2 {
+  text-align: center;
+  color: #e69c81;
+}
+
+#goalDeleteBtn {
+  background-color: teal;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #3c0a4d;
+  height: 8%;
+  width: 40%;
+  margin: 3%;
+  border-radius: 4px;
+  box-shadow: 9px 10px 52px -12px rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+.goalsSubmitBtn {
+  background-color: teal;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #3c0a4d;
+  height: 8%;
+  width: 20%;
+  margin: 3%;
+  border-radius: 4px;
+  box-shadow: 9px 10px 52px -12px rgba(0, 0, 0, 0.75);
+  color: white;
+}
+.inspoImg {
+  width: 40%;
+}
+.goalsUlPost {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

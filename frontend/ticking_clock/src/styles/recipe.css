@@ -1,0 +1,41 @@
+.recipeForm {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.recipes {
+  background-color: white;
+  color: teal;
+  width: 20%;
+  height: 20%;
+  border-radius: 5px;
+  padding: 1%;
+}
+.recipeAddBtn {
+  background-color: teal;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #3c0a4d;
+  height: 8%;
+  width: 20%;
+  margin: 3%;
+  border-radius: 4px;
+  box-shadow: 9px 10px 52px -12px rgba(0, 0, 0, 0.75);
+  color: white;
+}
+.recipeImg {
+  width: 100%;
+}
+#recipeDeleteBtn {
+  background-color: teal;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #3c0a4d;
+  height: 8%;
+  width: 40%;
+  margin: 3%;
+  border-radius: 4px;
+  box-shadow: 9px 10px 52px -12px rgba(0, 0, 0, 0.75);
+  color: white;
+}

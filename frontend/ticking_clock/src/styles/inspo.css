@@ -1,0 +1,22 @@
+.inspoForm {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1%;
+}
+.inspoUlPost {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.inspoAddBtn {
+  background-color: teal;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #3c0a4d;
+  height: 8%;
+  width: 20%;
+  margin: 3%;
+  border-radius: 4px;
+  box-shadow: 9px 10px 52px -12px rgba(0, 0, 0, 0.75);
+  color: white;
+}

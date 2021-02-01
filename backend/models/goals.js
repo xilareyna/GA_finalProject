@@ -1,8 +1,8 @@
 const { Schema, model } = require("mongoose");
 
 const goalSchema = Schema({
-  expectedDate: { type: Date, required: false },
-  goals: { type: String, default: false },
+  expectedDate: { type: String, required: false },
+  goals: { type: String, required: false },
 });
 
 module.exports = model("Goal", goalSchema);

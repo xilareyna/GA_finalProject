@@ -1,38 +1,99 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
+
+.ulNavBar {
+  background-color: #f4c9af;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 1%;
+  top: 0;
+  left: 0;
+  box-shadow: -1px 7px 21px -1px rgba(0, 0, 0, 0.14);
+}
+.liNavBar {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  width: 5%;
+  font-size: 25px;
+}
+
+.headerLink {
+  text-decoration: none;
+  color: white;
+  margin: 0;
+}
+
+.journalForm {
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  /* background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); */
+  /* background-position: center; */
+  background-image: url("https://i.pinimg.com/originals/01/c7/9a/01c79af3c3bd5bb701f76451cfbd7003.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* button, */
+.journalBtn {
+  background-color: teal;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #3c0a4d;
+  height: 8%;
+  width: 20%;
+  margin: 3%;
+  border-radius: 4px;
+  box-shadow: 9px 10px 52px -12px rgba(0, 0, 0, 0.75);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+h1 {
+  color: #4c6568;
+  background-color: white;
+  width: 20%;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+* {
+  font-family: "Noto Sans JP", sans-serif;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .journalStoryInput {
+  width: 28%;
+  height: 300px;
+  word-wrap: break-word;
+  word-break: break-all;
+} */
+.journal {
+  background-color: white;
+  color: #4c6568;
+  width: 20%;
+  height: 20%;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1%;
+}
+#journalBtn {
+  background-color: teal;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #3c0a4d;
+  height: 8%;
+  width: 40%;
+  margin: 3%;
+  border-radius: 4px;
+  box-shadow: 9px 10px 52px -12px rgba(0, 0, 0, 0.75);
+  color: white;
 }
