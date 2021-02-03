@@ -19,7 +19,9 @@ export default (props) => {
   /////////
   const fetchGoal = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/goals");
+      const response = await fetch(
+        "https://tickingclock.herokuapp.com/api/goals"
+      );
       const data = await response.json();
       setGoals(data);
     } catch (error) {
@@ -32,12 +34,15 @@ export default (props) => {
   /////////
   const deleteGoals = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/goals/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://tickingclock.herokuapp.com/api/goals/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const data = await response.json();
       const filteredGoals = goals.filter((item) => item._id !== data._id);
       setGoals(filteredGoals);
@@ -64,13 +69,16 @@ export default (props) => {
     event.currentTarget.reset();
 
     try {
-      const response = await fetch("http://localhost:3000/api/goals", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: body,
-      });
+      const response = await fetch(
+        "https://tickingclock.herokuapp.com/api/goals",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: body,
+        }
+      );
       const data = await response.json();
       setGoals([...data.goals]);
       console.log(event.currentTarget);

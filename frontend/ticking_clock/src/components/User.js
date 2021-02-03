@@ -22,13 +22,16 @@ export default (props) => {
       password: regPasswordInput.current.value,
     });
     try {
-      const response = await fetch("http://localhost:3000/api/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body,
-      });
+      const response = await fetch(
+        "https://tickingclock.herokuapp.com/api/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body,
+        }
+      );
       const data = await response.json();
       alert(
         `Welcome ${regNameInput.current.value}! Your account has been created.`
@@ -47,13 +50,16 @@ export default (props) => {
       password: passwordInput.current.value,
     });
     try {
-      const response = await fetch("http://localhost:3000/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body,
-      });
+      const response = await fetch(
+        "https://tickingclock.herokuapp.com/api/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body,
+        }
+      );
       const data = await response.json();
       window.localStorage.setItem("token", `Bearer ${data.token}`);
       window.localStorage.setItem("username", `${data.username}`);

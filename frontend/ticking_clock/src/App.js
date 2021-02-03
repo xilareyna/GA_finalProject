@@ -15,7 +15,9 @@ function App() {
   /////////
   const fetchJournal = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/home");
+      const response = await fetch(
+        "https://tickingclock.herokuapp.com/api/home"
+      );
       const data = await response.json();
       setJournal(data);
     } catch (error) {
@@ -28,12 +30,15 @@ function App() {
   /////////
   const deleteJournal = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/home/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://tickingclock.herokuapp.com/api/home/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-type": "application/json",
+          },
+        }
+      );
       const data = await response.json();
       const filteredJournals = journal.filter((item) => item._id !== data._id);
       setJournal(filteredJournals);

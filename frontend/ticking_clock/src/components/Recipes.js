@@ -63,13 +63,16 @@ export default (props) => {
     event.currentTarget.reset();
 
     try {
-      const response = await fetch("http://localhost:3000/api/recipes", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: body,
-      });
+      const response = await fetch(
+        "https://tickingclock.herokuapp.com/api/recipes",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: body,
+        }
+      );
       const data = await response.json();
       setRecipe([...data.recipes]);
       console.log(event.currentTarget);

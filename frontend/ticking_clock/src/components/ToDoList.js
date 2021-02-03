@@ -16,7 +16,9 @@ export default (props) => {
   /////////
   const fetchList = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/todolist");
+      const response = await fetch(
+        "https://tickingclock.herokuapp.com/api/todolist"
+      );
       const data = await response.json();
       setList(data);
     } catch (error) {
@@ -29,12 +31,15 @@ export default (props) => {
   /////////
   const deleteList = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/todolist/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://tickingclock.herokuapp.com/api/todolist/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-type": "application/json",
+          },
+        }
+      );
       const data = await response.json();
       const filteredList = list.filter((item) => item._id !== data._id);
       setList(filteredList);
@@ -60,13 +65,16 @@ export default (props) => {
     event.currentTarget.reset();
 
     try {
-      const response = await fetch("http://localhost:3000/api/todolist", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: body,
-      });
+      const response = await fetch(
+        "https://tickingclock.herokuapp.com/api/todolist",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: body,
+        }
+      );
       const data = await response.json();
       setList([...data.list]);
       console.log(event.currentTarget);

@@ -1,8 +1,10 @@
 {
+  "engines": {
+    "node": "15.0.1"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "express-react-views": "^0.11.0",
-    "mongoose": "^5.11.13",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "bootstrap": "^4.5.3",
@@ -10,7 +12,13 @@
     "react-bootstrap": "^1.4.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.13"
   },
   "scripts": {
     "start": "PORT=3005 react-scripts start",
@@ -23,5 +31,20 @@
       "react-app",
       "react-app/jest"
     ]
-  }
+  },
+  "name": "GA_finalProject",
+  "description": "Final project for General Assembly Bootcamp",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xilareyna/GA_finalProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xilareyna/GA_finalProject/issues"
+  },
+  "homepage": "https://github.com/xilareyna/GA_finalProject#readme"
 }
