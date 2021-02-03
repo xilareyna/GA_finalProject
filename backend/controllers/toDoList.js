@@ -1,7 +1,8 @@
 const express = require("express");
 const list = express.Router();
 const List = require("../models/toDoList.js");
-
+const User = require("../models/user.js");
+const { findOneAndUpdate } = require("../models/user.js");
 // home.get("/", (req, res) => {
 //   res.send("index");
 // });
@@ -12,9 +13,19 @@ const List = require("../models/toDoList.js");
 
 list.post("/", async (req, res) => {
   try {
-    const createdList = await List.create(req.body);
+    const createdList = await List.create(req.body.list);
+
+    const username = req.body.username;
+    const user = await User.findOne({ username });
+
+    const updatedUser = await User.findOneAndUpdate(
+      { username },
+      { list: [...user.list, createdList._id] },
+      { new: true }
+    ).populate("list");
+
     //status sets the status code then sends a json respone
-    res.status(200).json(createdList);
+    res.status(200).json(updatedUser);
   } catch (error) {
     res.status(400).json(error);
   }

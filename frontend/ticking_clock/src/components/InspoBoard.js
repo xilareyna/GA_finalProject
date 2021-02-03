@@ -12,7 +12,7 @@ export default (props) => {
   /////////
   const fetchInspo = async () => {
     try {
-      const response = await fetch("http://localhost:3000/inspo");
+      const response = await fetch("http://localhost:3000/api/inspo");
       const data = await response.json();
       setInspo(data);
     } catch (error) {
@@ -25,10 +25,10 @@ export default (props) => {
   /////////
   const deleteInspo = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/inspo/${id}`, {
+      const response = await fetch(`http://localhost:3000/api/inspo/${id}`, {
         method: "DELETE",
         headers: {
-          "Content-type": "application/json",
+          "Content-Type": "application/json",
         },
       });
       const data = await response.json();
@@ -39,27 +39,34 @@ export default (props) => {
     }
   };
 
+  /////////
+  //Create
+  /////////
+
   const createInspo = async (event) => {
     event.preventDefault();
     const img = imgInput.current.value;
     const title = titleInput.current.value;
 
     const body = JSON.stringify({
-      img,
-      title,
+      inspo: {
+        img,
+        title,
+      },
+      username: window.localStorage.getItem("username"),
     });
     event.currentTarget.reset();
 
     try {
-      const response = await fetch("http://localhost:3000/inspo", {
+      const response = await fetch("http://localhost:3000/api/inspo", {
         method: "POST",
         headers: {
-          "Content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body: body,
       });
       const data = await response.json();
-      setInspo([...inspo, data]);
+      setInspo([...data.inspo]);
       console.log(event.currentTarget);
       console.log(event.target);
     } catch (error) {
@@ -76,7 +83,7 @@ export default (props) => {
       <header className="navBar">
         <ul className="ulNavBar">
           <li className="liNavBar">
-            <Link to={"/"} className="headerLink">
+            <Link to={"/journal"} className="headerLink">
               Journal
             </Link>
           </li>
@@ -100,13 +107,34 @@ export default (props) => {
               List
             </Link>
           </li>
+          <li className="liNavBar">
+            <Link to={"/calendar"} className="headerLink">
+              Calendar
+            </Link>
+          </li>
+          <li className="liNavBar">
+            <Link to={"/"} className="headerLink">
+              <i class="fas fa-sign-out-alt"></i>
+            </Link>
+          </li>
         </ul>
       </header>
+      <h1 className="inspoH1">Inspo Board</h1>
 
       <form onSubmit={createInspo} className="inspoForm">
-        <input type="text" ref={imgInput} placeholder="Image Link" />
+        <input
+          type="text"
+          ref={imgInput}
+          placeholder="Image Link"
+          className="inspoForms"
+        />
         <br />
-        <input type="text" ref={titleInput} placeholder="Title" />
+        <input
+          type="text"
+          ref={titleInput}
+          placeholder="Title"
+          className="inspoForms"
+        />
         <br />
         <input type="submit" value="Add to Inspo" className="inspoAddBtn" />
       </form>

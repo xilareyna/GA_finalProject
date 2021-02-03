@@ -1,7 +1,8 @@
 const express = require("express");
 const recipes = express.Router();
 const Recipes = require("../models/recipes.js");
-
+const User = require("../models/user.js");
+const { findOneAndUpdate } = require("../models/user.js");
 // home.get("/", (req, res) => {
 //   res.send("index");
 // });
@@ -12,9 +13,17 @@ const Recipes = require("../models/recipes.js");
 
 recipes.post("/", async (req, res) => {
   try {
-    const createdRecipes = await Recipes.create(req.body);
+    const createdRecipes = await Recipes.create(req.body.recipes);
+    const username = req.body.username;
+    const user = await User.findOne({ username });
+
+    const updatedUser = await User.findOneAndUpdate(
+      { username },
+      { recipes: [...user.recipes, createdRecipes._id] },
+      { new: true }
+    ).populate("goals");
     //status sets the status code then sends a json respone
-    res.status(200).json(createdRecipes);
+    res.status(200).json(updatedUser);
   } catch (error) {
     res.status(400).json(error);
   }

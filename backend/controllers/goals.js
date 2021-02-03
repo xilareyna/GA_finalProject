@@ -1,7 +1,8 @@
 const express = require("express");
 const goals = express.Router();
 const Goals = require("../models/goals.js");
-
+const User = require("../models/user.js");
+const { findOneAndUpdate } = require("../models/user.js");
 // home.get("/", (req, res) => {
 //   res.send("index");
 // });
@@ -12,9 +13,18 @@ const Goals = require("../models/goals.js");
 
 goals.post("/", async (req, res) => {
   try {
-    const createdGoals = await Goals.create(req.body);
+    const createdGoals = await Goals.create(req.body.goals);
+    const username = req.body.username;
+    const user = await User.findOne({ username });
+
+    const updatedUser = await User.findOneAndUpdate(
+      { username },
+      { goals: [...user.goals, createdGoals._id] },
+      { new: true }
+    ).populate("goals");
+
     //status sets the status code then sends a json respone
-    res.status(200).json(createdGoals);
+    res.status(200).json(updatedUser);
   } catch (error) {
     res.status(400).json(error);
   }
@@ -26,6 +36,9 @@ goals.post("/", async (req, res) => {
 
 goals.get("/", async (req, res) => {
   try {
+    const username = req.body.username;
+    const user = await User.findOne({ username });
+    // console.log(user);
     const foundGoals = await Goals.find({});
     res.status(200).json(foundGoals);
   } catch (error) {

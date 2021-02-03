@@ -17,7 +17,19 @@
 }
 h2 {
   text-align: center;
-  color: #e69c81;
+  color: white;
+  /* background-color: white; */
+  width: 40%;
+  margin: 0 auto;
+  padding: 1%;
+  margin-top: 1%;
+  border-radius: 3px;
+  font-size: 30px;
+}
+
+#quote {
+  font-family: "Dawning of a New Day", cursive;
+  font-size: 40px;
 }
 
 #goalDeleteBtn {

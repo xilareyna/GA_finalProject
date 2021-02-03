@@ -1,7 +1,8 @@
 const express = require("express");
 const home = express.Router();
 const Home = require("../models/home.js");
-
+const User = require("../models/user.js");
+const { findOneAndUpdate } = require("../models/user.js");
 // home.get("/", (req, res) => {
 //   res.send("index");
 // });
@@ -12,9 +13,17 @@ const Home = require("../models/home.js");
 
 home.post("/", async (req, res) => {
   try {
-    const createdHome = await Home.create(req.body);
+    const createdHome = await Home.create(req.body.home);
+    const username = req.body.username;
+    const user = await User.findOne({ username });
+
+    const updatedUser = await User.findOneAndUpdate(
+      { username },
+      { home: [...user.home, createdHome._id] },
+      { new: true }
+    ).populate("home");
     //status sets the status code then sends a json respone
-    res.status(200).json(createdHome);
+    res.status(200).json(updatedUser);
   } catch (error) {
     res.status(400).json(error);
   }
@@ -26,8 +35,10 @@ home.post("/", async (req, res) => {
 
 home.get("/", async (req, res) => {
   try {
-    const foundHome = await Home.find({});
-    res.status(200).json(foundHome);
+    // const user = await User.findOne({ username });
+
+    const foundHomes = await Home.find({});
+    res.status(200).json(foundHomes);
   } catch (error) {
     res.status(400).json(error);
   }
@@ -59,6 +70,30 @@ home.put("/:id", async (req, res) => {
   } catch (error) {
     res.status(400).json(error);
   }
+});
+
+//==============
+// Edit Route
+//=============
+
+home.get("/journal/:id/edit", (req, res) => {
+  Home.findById(req.params.id, (err, foundHome) => {
+    //find the fruit
+    res.render("EditJournal.js", {
+      home: foundHome,
+    });
+  });
+});
+
+home.put("/journal/:id", (req, res) => {
+  Home.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedModel) => {
+      res.redirect("/journal");
+    }
+  );
 });
 
 module.exports = home;

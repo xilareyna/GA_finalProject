@@ -9,11 +9,15 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const User = require("./models/user");
 
+const SECRET =
+  "yesimthebestandnoimnotpositiveimdefiniteiknowthegamelikeimreffinit";
+
 const homeController = require("./controllers/home.js");
 const goalController = require("./controllers/goals.js");
 const listController = require("./controllers/todoList.js");
 const recipeController = require("./controllers/recipes.js");
 const inspoController = require("./controllers/inspoBoard.js");
+const userController = require("./controllers/user.js");
 
 //============
 //Middleware
@@ -44,13 +48,14 @@ mongoose.connection.once("open", () => {
 //============
 //Controllers
 //============
-app.use("/home", homeController);
-app.use("/goals", goalController);
-app.use("/todolist", listController);
-app.use("/recipes", recipeController);
-app.use("/inspo", inspoController);
+//"/api/home"
+app.use("/api/home", homeController);
+app.use("/api/goals", goalController);
+app.use("/api/todolist", listController);
+app.use("/api/recipes", recipeController);
+app.use("/api/inspo", inspoController);
 
-app.post("/register", (req, res) => {
+app.post("/api/register", (req, res) => {
   req.body.password = bcrypt.hashSync(
     req.body.password,
     bcrypt.genSaltSync(10)
@@ -63,7 +68,7 @@ app.post("/register", (req, res) => {
     }
   });
 });
-app.post("/login", async (req, res) => {
+app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
   try {
     const user = await User.findOne({ username });
@@ -84,6 +89,8 @@ app.post("/login", async (req, res) => {
         username,
         authenticated: true,
       });
+    } else {
+      res.status(500);
     }
   } catch (error) {
     res.status(400).json(error);

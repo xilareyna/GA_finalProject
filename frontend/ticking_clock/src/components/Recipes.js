@@ -15,7 +15,7 @@ export default (props) => {
   /////////
   const fetchRecipe = async () => {
     try {
-      const response = await fetch("http://localhost:3000/recipes");
+      const response = await fetch("http://localhost:3000/api/recipes");
       const data = await response.json();
       setRecipe(data);
     } catch (error) {
@@ -28,7 +28,7 @@ export default (props) => {
   /////////
   const deleteRecipe = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/recipes/${id}`, {
+      const response = await fetch(`http://localhost:3000/api/recipes/${id}`, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json",
@@ -51,24 +51,27 @@ export default (props) => {
     const cookTime = cookTimeInput.current.value;
 
     const body = JSON.stringify({
-      title,
-      ingredients,
-      directions,
-      img,
-      cookTime,
+      recipes: {
+        title,
+        ingredients,
+        directions,
+        img,
+        cookTime,
+      },
+      username: window.localStorage.getItem("username"),
     });
     event.currentTarget.reset();
 
     try {
-      const response = await fetch("http://localhost:3000/recipes", {
+      const response = await fetch("http://localhost:3000/api/recipes", {
         method: "POST",
         headers: {
-          "Content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body: body,
       });
       const data = await response.json();
-      setRecipe([...recipes, data]);
+      setRecipe([...data.recipes]);
       console.log(event.currentTarget);
       console.log(event.target);
     } catch (error) {
@@ -85,7 +88,7 @@ export default (props) => {
       <header className="navBar">
         <ul className="ulNavBar">
           <li className="liNavBar">
-            <Link to={"/"} className="headerLink">
+            <Link to={"/journal"} className="headerLink">
               Journal
             </Link>
           </li>
@@ -109,9 +112,19 @@ export default (props) => {
               List
             </Link>
           </li>
+          <li className="liNavBar">
+            <Link to={"/calendar"} className="headerLink">
+              Calendar
+            </Link>
+          </li>
+          <li className="liNavBar">
+            <Link to={"/"} className="headerLink">
+              <i class="fas fa-sign-out-alt"></i>
+            </Link>
+          </li>
         </ul>
       </header>
-
+      <h1>Recipes</h1>
       <form onSubmit={createRecipe} className="recipeForm">
         <input type="text" ref={titleInput} placeholder="Recipe Title" />
         <input type="text" ref={cookTimeInput} placeholder="Cooking Time" />

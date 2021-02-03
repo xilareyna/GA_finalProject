@@ -1,7 +1,8 @@
 const express = require("express");
 const inspo = express.Router();
 const Inspo = require("../models/inspoBoard.js");
-
+const User = require("../models/user.js");
+const { findOneAndUpdate } = require("../models/user.js");
 // home.get("/", (req, res) => {
 //   res.send("index");
 // });
@@ -12,9 +13,18 @@ const Inspo = require("../models/inspoBoard.js");
 
 inspo.post("/", async (req, res) => {
   try {
-    const createdInspo = await Inspo.create(req.body);
+    const createdInspo = await Inspo.create(req.body.inspo);
+    const username = req.body.username;
+    const user = await User.findOne({ username });
+
+    const updatedUser = await User.findOneAndUpdate(
+      { username },
+      { inspo: [...user.inspo, createdInspo._id] },
+      { new: true }
+    ).populate("inspo");
+
     //status sets the status code then sends a json respone
-    res.status(200).json(createdInspo);
+    res.status(200).json(updatedUser);
   } catch (error) {
     res.status(400).json(error);
   }

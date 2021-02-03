@@ -1,20 +1,22 @@
 import { useRef, useEffect, useState } from "react";
 import { Router, Switch, Route, Link } from "react-router-dom";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
-import css from "../styles/calendar.css";
+import css from "../styles/list.css";
+
+// import Calendar from "react-calendar";
+// import "react-calendar/dist/Calendar.css";
+// import css from "../styles/calendar.css";
 
 export default (props) => {
   const [list, setList] = useState([]);
   const listInput = useRef(null);
-  const [value, onChange] = useState(new Date());
+  // const [value, onChange] = useState(new Date());
 
   /////////
   //Read
   /////////
   const fetchList = async () => {
     try {
-      const response = await fetch("http://localhost:3000/todolist");
+      const response = await fetch("http://localhost:3000/api/todolist");
       const data = await response.json();
       setList(data);
     } catch (error) {
@@ -27,7 +29,7 @@ export default (props) => {
   /////////
   const deleteList = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/todolist/${id}`, {
+      const response = await fetch(`http://localhost:3000/api/todolist/${id}`, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json",
@@ -41,17 +43,24 @@ export default (props) => {
     }
   };
 
+  /////////
+  //Create
+  /////////
+
   const createList = async (event) => {
     event.preventDefault();
     const list = listInput.current.value;
 
     const body = JSON.stringify({
-      list,
+      list: {
+        list,
+      },
+      username: window.localStorage.getItem("username"),
     });
     event.currentTarget.reset();
 
     try {
-      const response = await fetch("http://localhost:3000/todolist", {
+      const response = await fetch("http://localhost:3000/api/todolist", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -59,7 +68,7 @@ export default (props) => {
         body: body,
       });
       const data = await response.json();
-      setList([...list, data]);
+      setList([...data.list]);
       console.log(event.currentTarget);
       console.log(event.target);
     } catch (error) {
@@ -72,11 +81,11 @@ export default (props) => {
   }, [list]);
 
   return (
-    <div>
+    <div className="list">
       <header className="navBar">
         <ul className="ulNavBar">
           <li className="liNavBar">
-            <Link to={"/"} className="headerLink">
+            <Link to={"/journal"} className="headerLink">
               Journal
             </Link>
           </li>
@@ -100,13 +109,31 @@ export default (props) => {
               List
             </Link>
           </li>
+          <li className="liNavBar">
+            <Link to={"/calendar"} className="headerLink">
+              Calendar
+            </Link>
+          </li>
+          <li className="liNavBar">
+            <Link to={"/"} className="headerLink">
+              <i class="fas fa-sign-out-alt"></i>
+            </Link>
+          </li>
         </ul>
       </header>
-      <Calendar className="cal" onChange={onChange} value={value} />
+      <h1 className="h1List">To Do List</h1>
+      {/* <Calendar className="cal" onChange={onChange} value={value} /> */}
       <form onSubmit={createList}>
-        <input type="text" ref={listInput} placeholder="List Items" />
+        <textarea
+          type="text"
+          rows="10"
+          cols="41"
+          ref={listInput}
+          placeholder=" List Items"
+        />
+
         <br />
-        <input type="submit" value="Add to list" />
+        <input type="submit" value="Add to list" className="listBtn" />
       </form>
       <ul>
         {list.map((item) => {

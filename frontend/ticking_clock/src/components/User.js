@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import css from "../styles/user.css";
-import { Redirect } from "react-router";
+import { Redirect, useHistory } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default (props) => {
@@ -9,6 +9,8 @@ export default (props) => {
   const passwordInput = useRef(null);
   const regNameInput = useRef(null);
   const regPasswordInput = useRef(null);
+
+  const history = useHistory();
 
   /////////
   //Register
@@ -20,14 +22,17 @@ export default (props) => {
       password: regPasswordInput.current.value,
     });
     try {
-      const response = await fetch("http://localhost:3000/register", {
+      const response = await fetch("http://localhost:3000/api/register", {
         method: "POST",
         headers: {
-          "Content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body,
       });
       const data = await response.json();
+      alert(
+        `Welcome ${regNameInput.current.value}! Your account has been created.`
+      );
     } catch (error) {
       console.error(error);
     }
@@ -42,16 +47,20 @@ export default (props) => {
       password: passwordInput.current.value,
     });
     try {
-      const response = await fetch("http://localhost:3000/login", {
+      const response = await fetch("http://localhost:3000/api/login", {
         method: "POST",
         headers: {
-          "Content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body,
       });
       const data = await response.json();
       window.localStorage.setItem("token", `Bearer ${data.token}`);
+      window.localStorage.setItem("username", `${data.username}`);
+
       setToken(`Bearer ${data.token}`);
+      console.log("heyyyyy");
+      history.push("/journal");
     } catch (error) {
       console.error(error);
     }
@@ -64,11 +73,44 @@ export default (props) => {
   }, [token]);
 
   return (
-    <div>
-      <h1> Register Form</h1>
+    <div className="user">
+      <h2 className="userIntro">
+        <span id="userH1">
+          The Ticking Clock
+          <iframe
+            src="https://giphy.com/embed/YMdhF7u01diFhOx4Zy"
+            width="60"
+            height="60"
+            frameBorder="0"
+            class="giphy-embed"
+            allowFullScreen
+          ></iframe>
+          {/* <iframe
+            src="https://giphy.com/embed/kaUIoIsHxbUAkiieAv"
+            width="60"
+            height="60"
+            frameBorder="0"
+            class="giphy-embed"
+          ></iframe> */}
+        </span>
+        <br />
+        <br />
+        The Ticking Clock is a space where you can keep track of your busy life
+        + personal growth. Helping you to keep track of your goals so you can
+        reach your fullest potential
+      </h2>
+
+      <br />
+      <h4>Please create an account or sign in to continue.</h4>
+      <h2 className="userFormh2"> Register Form</h2>
       <form onSubmit={register}>
         <label>
-          <input type="text" ref={regNameInput} placeholder="Username" />
+          <input
+            type="text"
+            ref={regNameInput}
+            placeholder="Username"
+            className="userFormInput"
+          />
         </label>
         <br />
         <label>
@@ -76,25 +118,49 @@ export default (props) => {
             type="password"
             ref={regPasswordInput}
             placeholder="Password"
+            className="userFormInput"
           />
         </label>
         <br />
-        <input type="submit"></input>
+        <input type="submit" value="Register" className="userBtn" />
       </form>
-      <h1>Login Form</h1>
+      <h2 className="userFormh2">Login Form</h2>
       <form onSubmit={login}>
         <label>
-          <input type="text" ref={nameInput} placeholder="Username" />
+          <input
+            type="text"
+            ref={nameInput}
+            placeholder="Username"
+            className="userFormInput"
+          />
         </label>
         <br />
 
         <label>
-          <input type="password" ref={passwordInput} placeholder="Password" />
+          <input
+            type="password"
+            ref={passwordInput}
+            placeholder="Password"
+            className="userFormInput"
+          />
         </label>
         <br />
 
-        <input type="submit"></input>
+        <input type="submit" value="Login" className="userBtn" />
       </form>
+      <br />
+      <br />
+
+      <footer>
+        Designed + Built by{" "}
+        <a
+          href="https://www.linkedin.com/in/xilareyna/"
+          className="footerLink"
+          target="_blank"
+        >
+          Xila Reyna
+        </a>
+      </footer>
     </div>
   );
 };

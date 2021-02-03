@@ -8,11 +8,11 @@ export default (props) => {
   const [value, onChange] = useState(new Date());
 
   return (
-    <div>
+    <div className="calendarDiv">
       <header className="navBar">
         <ul className="ulNavBar">
           <li className="liNavBar">
-            <Link to={"/"} className="headerLink">
+            <Link to={"/journal"} className="headerLink">
               Journal
             </Link>
           </li>
@@ -38,11 +38,17 @@ export default (props) => {
           </li>
           <li className="liNavBar">
             <Link to={"/calendar"} className="headerLink">
-              List
+              Calendar
+            </Link>
+          </li>
+          <li className="liNavBar">
+            <Link to={"/"} className="headerLink">
+              <i class="fas fa-sign-out-alt"></i>
             </Link>
           </li>
         </ul>
       </header>
+      <h1 className="calH1">Calendar</h1>
       <Calendar className="cal" onChange={onChange} value={value} />
     </div>
   );

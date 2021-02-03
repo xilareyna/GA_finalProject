@@ -19,7 +19,7 @@ export default (props) => {
   /////////
   const fetchGoal = async () => {
     try {
-      const response = await fetch("http://localhost:3000/goals");
+      const response = await fetch("http://localhost:3000/api/goals");
       const data = await response.json();
       setGoals(data);
     } catch (error) {
@@ -32,10 +32,10 @@ export default (props) => {
   /////////
   const deleteGoals = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/goals/${id}`, {
+      const response = await fetch(`http://localhost:3000/api/goals/${id}`, {
         method: "DELETE",
         headers: {
-          "Content-type": "application/json",
+          "Content-Type": "application/json",
         },
       });
       const data = await response.json();
@@ -46,27 +46,33 @@ export default (props) => {
     }
   };
 
+  /////////
+  //Create
+  /////////
+
   const createGoal = async (event) => {
     event.preventDefault();
     const goals = goalsInput.current.value;
     const expectedDate = expectedDateInput.current.value;
-
     const body = JSON.stringify({
-      expectedDate,
-      goals,
+      goals: {
+        expectedDate,
+        goals,
+      },
+      username: window.localStorage.getItem("username"),
     });
     event.currentTarget.reset();
 
     try {
-      const response = await fetch("http://localhost:3000/goals", {
+      const response = await fetch("http://localhost:3000/api/goals", {
         method: "POST",
         headers: {
-          "Content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body: body,
       });
       const data = await response.json();
-      setGoals([...goals, data]);
+      setGoals([...data.goals]);
       console.log(event.currentTarget);
       console.log(event.target);
     } catch (error) {
@@ -97,7 +103,7 @@ export default (props) => {
       <header className="navBar">
         <ul className="ulNavBar">
           <li className="liNavBar">
-            <Link to={"/"} className="headerLink">
+            <Link to={"/journal"} className="headerLink">
               Journal
             </Link>
           </li>
@@ -121,11 +127,22 @@ export default (props) => {
               List
             </Link>
           </li>
+          <li className="liNavBar">
+            <Link to={"/calendar"} className="headerLink">
+              Calendar
+            </Link>
+          </li>
+          <li className="liNavBar">
+            <Link to={"/"} className="headerLink">
+              <i class="fas fa-sign-out-alt"></i>
+            </Link>
+          </li>
         </ul>
       </header>
       <h2>
         Todays Affirmation✨
-        <br />"{affirmation[0] ? affirmation[0].phrase : ""} "
+        <br />
+        <span id="quote">"{affirmation[0] ? affirmation[0].phrase : ""} "</span>
       </h2>
 
       <form onSubmit={createGoal} className="goalsForm">

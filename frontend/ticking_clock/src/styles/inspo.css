@@ -20,3 +20,23 @@
   box-shadow: 9px 10px 52px -12px rgba(0, 0, 0, 0.75);
   color: white;
 }
+.inspoForms {
+  width: 20%;
+  height: 10%;
+  padding: 1%;
+}
+.inspoH1 {
+  font-size: 40px;
+}
+#inspoDeleteBtn {
+  background-color: teal;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #3c0a4d;
+  height: 8%;
+  width: 15%;
+  margin: 3%;
+  border-radius: 4px;
+  box-shadow: 9px 10px 52px -12px rgba(0, 0, 0, 0.75);
+  color: white;
+}

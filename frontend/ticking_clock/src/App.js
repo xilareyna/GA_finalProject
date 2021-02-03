@@ -15,7 +15,7 @@ function App() {
   /////////
   const fetchJournal = async () => {
     try {
-      const response = await fetch("http://localhost:3000/home");
+      const response = await fetch("http://localhost:3000/api/home");
       const data = await response.json();
       setJournal(data);
     } catch (error) {
@@ -28,7 +28,7 @@ function App() {
   /////////
   const deleteJournal = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/home/${id}`, {
+      const response = await fetch(`http://localhost:3000/api/home/${id}`, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json",
@@ -51,7 +51,7 @@ function App() {
       <header className="navBar">
         <ul className="ulNavBar">
           <li className="liNavBar">
-            <Link to={"/"} className="headerLink">
+            <Link to={"/journal"} className="headerLink">
               Journal
             </Link>
           </li>
@@ -80,15 +80,20 @@ function App() {
               Calendar
             </Link>
           </li>
+          <li className="liNavBar">
+            <Link to={"/"} className="headerLink">
+              <i class="fas fa-sign-out-alt"></i>
+            </Link>
+          </li>
         </ul>
       </header>
 
       <h1>Journal</h1>
       <JournalForm />
-      <ul>
+      <ul className="journalUl">
         {journal.map((item) => {
           return (
-            <li key={item._id} class="journal">
+            <li key={item._id} className="journal">
               <br />
               <h3>
                 {item.title} {item.date}
