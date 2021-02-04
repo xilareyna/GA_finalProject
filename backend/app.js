@@ -14,7 +14,7 @@ const SECRET =
 
 const homeController = require("./controllers/home.js");
 const goalController = require("./controllers/goals.js");
-const listController = require("./controllers/todoList.js");
+const listController = require("./controllers/toDoList.js");
 const recipeController = require("./controllers/recipes.js");
 const inspoController = require("./controllers/inspoBoard.js");
 const userController = require("./controllers/user.js");
