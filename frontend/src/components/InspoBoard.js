@@ -12,9 +12,7 @@ export default (props) => {
   /////////
   const fetchInspo = async () => {
     try {
-      const response = await fetch(
-        "https://tickingclock.herokuapp.com/api/inspo"
-      );
+      const response = await fetch("http://localhost:3000/api/inspo");
       const data = await response.json();
       setInspo(data);
     } catch (error) {
@@ -27,15 +25,12 @@ export default (props) => {
   /////////
   const deleteInspo = async (id) => {
     try {
-      const response = await fetch(
-        `https://tickingclock.herokuapp.com/api/inspo/${id}`,
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch(`http://localhost:3000/api/inspo/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       const data = await response.json();
       const filteredInspo = inspo.filter((item) => item._id !== data._id);
       setInspo(filteredInspo);

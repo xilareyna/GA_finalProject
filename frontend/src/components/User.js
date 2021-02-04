@@ -65,7 +65,7 @@ export default (props) => {
       window.localStorage.setItem("username", `${data.username}`);
 
       setToken(`Bearer ${data.token}`);
-      console.log("heyyyyy");
+      // console.log("heyyyyy");
       history.push("/journal");
     } catch (error) {
       console.error(error);
