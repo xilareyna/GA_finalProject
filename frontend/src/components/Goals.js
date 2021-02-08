@@ -20,7 +20,9 @@ export default (props) => {
   const fetchGoal = async () => {
     try {
       const response = await fetch(
-        "https://tickingclock.herokuapp.com/api/goals"
+        `https://tickingclock.herokuapp.com/api/goals/v1/${localStorage.getItem(
+          "username"
+        )}`
       );
       const data = await response.json();
       setGoals(data);

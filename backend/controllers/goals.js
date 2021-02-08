@@ -47,6 +47,22 @@ goals.get("/", async (req, res) => {
 });
 
 //==============
+// User Route
+//=============
+
+goals.get("/v1/:username", async (req, res) => {
+  try {
+    const username = req.params.username;
+    const user = await User.findOne({ username });
+    const fullUser = await user.execPopulate("goals");
+    const foundGoals = fullUser.goals;
+    res.status(200).json(foundGoals);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
+//==============
 // Delete Route
 //=============
 
