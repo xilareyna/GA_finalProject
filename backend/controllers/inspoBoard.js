@@ -36,7 +36,25 @@ inspo.post("/", async (req, res) => {
 
 inspo.get("/", async (req, res) => {
   try {
+    const username = req.body.username;
+    const user = await User.findOne({ username });
     const foundInspo = await Inspo.find({});
+    res.status(200).json(foundInspo);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
+//==============
+// User Route
+//=============
+
+inspo.get("/v1/:username", async (req, res) => {
+  try {
+    const username = req.params.username;
+    const user = await User.findOne({ username });
+    const fullUser = await user.execPopulate("inspo");
+    const foundInspo = fullUser.goals;
     res.status(200).json(foundInspo);
   } catch (error) {
     res.status(400).json(error);

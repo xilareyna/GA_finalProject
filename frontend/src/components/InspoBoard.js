@@ -12,7 +12,11 @@ export default (props) => {
   /////////
   const fetchInspo = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/inspo");
+      const response = await fetch(
+        `https://tickingclock.herokuapp.com/api/inspo/v1/${localStorage.getItem(
+          "username"
+        )}`
+      );
       const data = await response.json();
       setInspo(data);
     } catch (error) {
