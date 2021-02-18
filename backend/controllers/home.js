@@ -35,9 +35,25 @@ home.post("/", async (req, res) => {
 
 home.get("/", async (req, res) => {
   try {
-    // const user = await User.findOne({ username });
-
+    const username = req.body.username;
+    const user = await User.findOne({ username });
     const foundHomes = await Home.find({});
+    res.status(200).json(foundHomes);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
+//==============
+// User Route
+//=============
+
+home.get("/v1/:username", async (req, res) => {
+  try {
+    const username = req.params.username;
+    const user = await User.findOne({ username });
+    const fullUser = await user.execPopulate("home");
+    const foundHomes = fullUser.home;
     res.status(200).json(foundHomes);
   } catch (error) {
     res.status(400).json(error);
