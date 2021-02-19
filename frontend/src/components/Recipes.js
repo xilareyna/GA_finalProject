@@ -15,7 +15,11 @@ export default (props) => {
   /////////
   const fetchRecipe = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/recipes");
+      const response = await fetch(
+        `https://tickingclock.herokuapp.com/api/recipes/v1/${localStorage.getItem(
+          "username"
+        )}`
+      );
       const data = await response.json();
       setRecipe(data);
     } catch (error) {
@@ -28,12 +32,15 @@ export default (props) => {
   /////////
   const deleteRecipe = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/recipes/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://tickingclock.herokuapp.com/api/recipes/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-type": "application/json",
+          },
+        }
+      );
       const data = await response.json();
       const filteredRecipes = recipes.filter((item) => item._id !== data._id);
       setRecipe(filteredRecipes);

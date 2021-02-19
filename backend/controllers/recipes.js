@@ -43,6 +43,22 @@ recipes.get("/", async (req, res) => {
 });
 
 //==============
+// User Route
+//=============
+
+recipes.get("/v1/:username", async (req, res) => {
+  try {
+    const username = req.params.username;
+    const user = await User.findOne({ username });
+    const fullUser = await user.execPopulate("recipes");
+    const foundRecipes = fullUser.recipes;
+    res.status(200).json(foundRecipes);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
+//==============
 // Delete Route
 //=============
 
