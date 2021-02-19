@@ -17,7 +17,9 @@ export default (props) => {
   const fetchList = async () => {
     try {
       const response = await fetch(
-        "https://tickingclock.herokuapp.com/api/todolist"
+        `https://tickingclock.herokuapp.com/api/todolist/v1/${localStorage.getItem(
+          "username"
+        )}`
       );
       const data = await response.json();
       setList(data);

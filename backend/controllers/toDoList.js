@@ -45,6 +45,22 @@ list.get("/", async (req, res) => {
 });
 
 //==============
+// User Route
+//=============
+
+list.get("/v1/:username", async (req, res) => {
+  try {
+    const username = req.params.username;
+    const user = await User.findOne({ username });
+    const fullUser = await user.execPopulate("list");
+    const foundList = fullUser.list;
+    res.status(200).json(foundList);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
+//==============
 // Delete Route
 //=============
 
